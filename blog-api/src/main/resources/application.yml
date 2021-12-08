@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+# 配置数据库
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  profiles:
+    active: dev
+
+# 配置mybatis-plus的xml文件扫描路径
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+
+#shiro配置
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
+
+# 和代码中指定的jwt前缀要一致
+zxl:
+  jwt:
+    # 加密秘钥，自己指定
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    # token有效时长为7天，单位是秒
+    expire: 604800
+    header: token
+
+
+
