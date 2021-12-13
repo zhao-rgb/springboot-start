@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author zhao
  * @className JwtConfig
- * @Description TODO
+ * @Description JWT配置类
  * @Date 2021/12/13
  * @Version 1.0
  **/
